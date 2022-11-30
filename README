@@ -1,0 +1,13 @@
+
+
+Developer note :-D
+Basically to create a note you must follow these rules:
+
+1. Title: you must enter a title, it must be at least one letter up to 22.
+2. Date and time: both date and time are a must, date must be of today's date or a day in the future.
+3. Description can be left empty and has limit of 600 letters.
+
+
+if page doesn't load images please just check they are correctly located in your project folder
+
+

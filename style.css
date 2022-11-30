@@ -1,0 +1,202 @@
+
+/* Body tweaks */
+
+body {
+    width: 100%;
+    margin: 0px auto;
+    background-image: url(/assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/* Main form box design & background */
+
+.mainFormBox {
+    margin-top: 10%;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(top, rgb(117, 121, 255), rgb(178, 36, 239));
+    opacity: 0.7;
+    border: white 2px solid;
+    margin: 50px 30px;
+    padding: 50px;
+    width: 300px auto;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+
+
+/* From Hero text - title*/
+
+.heroText {
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+}
+
+/* Spacing between Form and the displayed notes */
+
+#mainForm{
+    padding-bottom: 200px;
+}
+
+/* Main Form fading animation */
+
+#mainForm:hover .mainFormBox {
+    background: -webkit-linear-gradient(top, rgb(117, 121, 255), rgb(178, 36, 239));
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#descriptionBox {
+    background-image: url(/assets/images/paper-sheet.jpg);
+}
+
+/* input boxes border and label text color */
+
+#descriptionBox,#titleBox,#dateBox,#timeBox {
+    border: 2px solid black;
+}
+
+#timeBox{
+    width: 115px;
+}
+
+label{
+    color: white;
+    padding-top: 15px;
+}
+
+/* Buttons and animation for main form */
+
+.button{
+    margin-top: 10px;
+    margin-left: 0%;
+    color: black;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+    transition-duration: 1s;
+    font-weight: 600;
+}
+
+.buttonSecond{
+    margin-left: 35%;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.5);
+    transition-duration: 0.4s;
+}
+
+/* Styling Text input boxes */
+/* I know I could have just use input but I want to be able to change the boxes in the future if needed */
+input[type=text], textarea, input[type=date] ,input[type=time]{
+    border-radius: 10px;
+}
+
+/* blue effect if user focus on any input */
+
+input:focus {
+    background-color: lightblue;
+}
+
+
+/* =============================================================== Note design  ============================================================================ */
+
+
+/* Background image of the note*/
+
+.backgroundImage {
+    background-image: url(assets/images/note.png);
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+}
+
+/* Note fading animation */
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+.backgroundImage:last-of-type{
+    animation: fadeIn 1s;
+    display: block;
+}
+
+/* title of the note */
+
+#title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Delete button note */
+
+.backgroundImage:hover #deleteButton{
+    display: block;
+    visibility: visible;
+}
+
+#deleteButton {
+    visibility: hidden;
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    border: 0px;
+    float: right;
+    padding-right: 15px;
+    margin-left: -100px
+}
+
+/* Description inside the note */
+
+#noteDescription {
+    height: 100px;
+    max-height: 180px;
+    min-height: 180px;
+    max-width: 200px;
+    margin-left: 50px;
+    overflow: auto;
+}
+
+/* Description scroll Bar design */
+
+#noteDescription::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#noteDescription::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#noteDescription::-webkit-scrollbar-thumb {
+	background-color: black;
+	border: 2px solid #555555;
+}
+
+/* Date and hour */
+
+#date, #hour {
+    text-align: start;
+    padding-left: 30px;
+}
+
+#notePrintDiv{
+    padding-left: 100px;
+}
